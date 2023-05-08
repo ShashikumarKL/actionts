@@ -1,21 +1,27 @@
-name: Build Docker Image
+name: Build and push Docker image
+
 on:
   push:
     branches:
       - main
+
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v2
-      - name: Build Docker Image
+
+      - name: Build Docker image
         uses: docker/build-push-action@v2
         with:
           context: .
           push: true
-          tags: myflaskapp:${{ github.sha }}
+          tags: your-username/your-image-name:latest
           build-args: |
-            FLASK_ENV=production
-            PORT=5000
 
+            # Optional build arguments, specify them as key-value pairs
+            ARG1=value1
+            ARG2=value2
+
+  =
