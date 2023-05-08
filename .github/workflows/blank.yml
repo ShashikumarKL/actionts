@@ -23,5 +23,3 @@ jobs:
             # Optional build arguments, specify them as key-value pairs
             ARG1=value1
             ARG2=value2
-
-  =
