@@ -18,4 +18,4 @@ jobs:
           build-args: |
             FLASK_ENV=production
             PORT=5000
-            SECRET_KEY=mysecretkey
+
